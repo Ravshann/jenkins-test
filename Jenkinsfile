@@ -4,12 +4,8 @@ pipeline {
          }
     stages {
         stage('Checkout') {
-
             steps {
-                git
-                        url: 'https://github.com/Ravshann/geohashUDF'
-
-            sh "ls -lat"
+                git url: 'https://github.com/Ravshann/geohashUDF'
             }
         }
         stage('Build') {
@@ -18,7 +14,7 @@ pipeline {
             }
         }
 
-	stage('Tests') {
+	    stage('Tests') {
             steps{
                 sh "mvn test"
             }
