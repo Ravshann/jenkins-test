@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Ravshann/geohashUDF'
+                git branch: 'master', url: 'https://github.com/Ravshann/jenkins-test'
             }
         }
         stage('Build') {
